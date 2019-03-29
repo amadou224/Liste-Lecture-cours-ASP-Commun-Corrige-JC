@@ -1,4 +1,5 @@
 ﻿using ListeLectureJCC.Models;
+using System;
 using System.Web.Mvc;
 
 namespace ListeLectureJCC.Controllers
@@ -31,6 +32,23 @@ namespace ListeLectureJCC.Controllers
         public ActionResult ConfirmationNotation()
         {
             return View();
+        }
+
+        public ActionResult FormulaireCreation()
+        {
+            return View();
+        }
+
+        public ActionResult ConfirmationCreation()
+        {
+            return View();
+        }
+            
+        public ActionResult SubmitCreationLivre(string Titre,string Auteur)
+        {
+            Livre nouvoLivre = new Livre(0, Titre, Auteur, null, DateTime.Now, null);
+
+           return View();
         }
     }
 }

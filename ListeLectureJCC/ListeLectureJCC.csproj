@@ -111,6 +111,7 @@
     <Content Include="Views\Livres\ConfirmationLecture.cshtml" />
     <Content Include="Views\Livres\ConfirmationCreation.cshtml" />
     <Content Include="Views\Livres\ConfirmationNotation.cshtml" />
+    <Content Include="Views\Livres\FormulaireCreation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

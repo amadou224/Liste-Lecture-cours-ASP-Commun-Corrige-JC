@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormulaireCreation</title>
+</head>
+<body>
+    <div> 
+
+
+        <form action="@Url.Action("SubmitCreationLivre")" method="Get">
+            <p>TITRE</p>
+            <input type="text" name="Titre"/>
+            <br />
+            <p>AUTEUR</p>
+            <input type="text" name="Auteur "/>
+            <br />
+            <p>NOTE</p>
+            <input type="text" name="Note"/>
+            <br />
+            <p>DATE DE DEBUT </p>
+            <input type="text" name="DateDebutLecture"/>
+            <br />
+            <p>DATE DE FIN </p>
+            <input type="text" name="DateFinLecture"/>
+            <br /><br />
+            <input type="submit" value="Enregister"/>   
+
+        </form>
+
+
+
+    </div>
+</body>
+</html>

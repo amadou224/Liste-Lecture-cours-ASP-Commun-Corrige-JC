@@ -84,10 +84,30 @@ namespace ListeLectureJCC.Models
                     dateFinLecture = (DateTime)reader["DateFinLecture"];
                 }
 
-                Livre livre = new Livre(idLivre ,titre, auteur, note, dateDebutLecture, dateFinLecture);
-                DetailModel model1 = new DetailModel(livre) ;
+                Livre livre = new Livre(idLivre, titre, auteur, note, dateDebutLecture, dateFinLecture);
+                DetailModel model1 = new DetailModel(livre);
                 return model1;
             }
+
         }
+        public static void InsererNouvoLivre(Livre nouvoLivre)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("Insert into Livre(Titre,Auteur,Note,DateDebutLecture,DateFinLecture ) Values(@titre,@auteur,@note,@datedeb,@datefin) ",connection);
+                command.Parameters.AddWithValue("@titre",nouvoLivre.Titre );
+                command.Parameters.AddWithValue("@auteur", nouvoLivre.Auteur);
+                command.Parameters.AddWithValue("@note", nouvoLivre.Note);
+                command.Parameters.AddWithValue("@datedeb", nouvoLivre.DateDeDebut);
+                command.Parameters.AddWithValue("@datefin", nouvoLivre.DateDeFin);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+
+
+
     }
 }
