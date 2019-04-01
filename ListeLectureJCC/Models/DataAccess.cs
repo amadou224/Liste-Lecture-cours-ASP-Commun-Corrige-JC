@@ -19,6 +19,7 @@ namespace ListeLectureJCC.Models
                 SqlDataReader reader = command.ExecuteReader();
 
                 //On avance sur la première ligne
+
                 reader.Read();
 
                 string titre = (string)reader["Titre"];
